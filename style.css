@@ -53,3 +53,16 @@ body{
 	background-color: #2FBE70;
 	border: none;
 }
+
+/* Extra item css */
+#customer-details{
+	display: none;
+}
+#tnx{
+	display: none;
+}
+
+.tnx-area{
+	border-radius: 20px;
+	box-shadow: 5px 5px 30px grey;
+}

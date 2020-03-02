@@ -5,6 +5,7 @@
    <title>Shopping Cart</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
    <link href="style.css" rel="stylesheet">
@@ -12,7 +13,7 @@
 
 <body>
 
-   <section>
+   <section id="shoppingArea">
       <div class="container">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
@@ -71,7 +72,71 @@
                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
+                  <button id="checkOut" type="button" class="btn btn-success check-out">Check Out</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="customer-details" class="m-5">
+      <div class="container bg-light p-5">
+         <h2 class="text-center py-3">Customer Details</h2>
+         <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputName">Customer Name</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Input Your Name">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPhone">Phone Number</label>
+                <input type="text" class="form-control" id="inputPhone" placeholder="Input Your Phone Number">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Permanent Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="Input Your Permanent Address">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Input Your Shipping Address</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Bangladesh</option>
+                  <option>Rasia</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <button id="confirmedOrder" type="submit" class="btn btn-primary">Conform Order</button>
+          </form>
+      </div>
+   </section>
+
+   <section id="tnx">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="tnx-area text-center text-light bg-primary m-5 p-5">
+                 <h1>Your order is confirmed !!!</h1>
+                  <h2>Thank You</h2>
                </div>
             </div>
          </div>

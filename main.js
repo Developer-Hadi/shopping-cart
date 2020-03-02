@@ -7,7 +7,6 @@
          const productAmountNumber = parseFloat(productAmount);
          const newCount = productAmountNumber +1;
          document.getElementById("productAmount").value = newCount ;
-         const itemPrice = document.getElementById("itemPrice").innerText;
          const increasePrice = productMainPrice * newCount;
          document.getElementById("itemPrice").innerText = increasePrice;
 
@@ -29,7 +28,6 @@
          document.getElementById("itemPrice").innerText = productMainPrice;
          }
          else{
-         const itemPrice = document.getElementById("itemPrice").innerText;
          const increasePrice = productMainPrice * newCount;
          document.getElementById("itemPrice").innerText = increasePrice;
          }
@@ -43,7 +41,6 @@
          const productAmountNumber2 = parseFloat(productAmount2);
          const newCount2 = productAmountNumber2 +1;
          document.getElementById("productAmount2").value = newCount2 ;
-         const itemPrice2 = document.getElementById("itemPrice2").innerText;
          const increasePrice2 = productMainPrice2 * newCount2;
          document.getElementById("itemPrice2").innerText = increasePrice2;
          updateTotal();
@@ -63,7 +60,6 @@
          document.getElementById("itemPrice2").innerText = productMainPrice2;
          }
          else{
-         const itemPrice2 = document.getElementById("itemPrice2").innerText;
          const increasePrice2 = productMainPrice2 * newCount2;
          document.getElementById("itemPrice2").innerText = increasePrice2;
          }
@@ -74,11 +70,13 @@
       const removeItem = document.getElementById("removeItem");
       removeItem.addEventListener("click", function(){
          document.getElementById("removeItem_1").style.display ="none";
+         document.getElementById("itemPrice").innerText = 0;
       })
       //close button2 event handler;
       const removeItem2 = document.getElementById("removeItem2");
       removeItem2.addEventListener("click", function(){
          document.getElementById("removeItem_2").style.display ="none";
+         document.getElementById("itemPrice2").innerText = 0;
       })
 
       //Subtotal & Total event handler;
@@ -94,4 +92,22 @@
          document.getElementById("tax").innerText = tax;
          document.getElementById("Total").innerText =getSubTotal + tax;
       }
+      updateTotal();
+      
+
+      //next page ;
+      const checkOut = document.getElementById("checkOut");
+      checkOut.addEventListener("click", function(){
+          const shoppingArea = document.getElementById("shoppingArea");
+          shoppingArea.style.display ="none";
+          const customerDetails = document.getElementById("customer-details");
+          customerDetails.style.display = "block";
+      })
+      const confirmedOrder = document.getElementById("confirmedOrder");
+      confirmedOrder.addEventListener("click", function(){
+          const customerDetail2 = document.getElementById("customer-details");
+          customerDetail2.style.display = "none";
+          const tnx = document.getElementById("tnx");
+          tnx.style.display ="block";
+      })
       
